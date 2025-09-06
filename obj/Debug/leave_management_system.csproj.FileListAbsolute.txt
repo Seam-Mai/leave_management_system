@@ -1,0 +1,17 @@
+Z:\.Net Programing\leave_management_system\leave_management_system\bin\Debug\leave_management_system.exe.config
+Z:\.Net Programing\leave_management_system\leave_management_system\bin\Debug\leave_management_system.exe
+Z:\.Net Programing\leave_management_system\leave_management_system\bin\Debug\leave_management_system.pdb
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.csproj.AssemblyReference.cache
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Form1.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Properties.Resources.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Security.Login.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Security.Register.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.csproj.GenerateResource.cache
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.csproj.CoreCompileInputs.cache
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.exe
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.pdb
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.exe.config
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.EmployeeDashboard.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.PenddingEmployee.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.RequestLeave.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.Attendance.resources
