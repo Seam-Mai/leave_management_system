@@ -46,10 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard\Employee\Attendance.cs">
+    <Compile Include="Dashboard\Employee\UserControl\Attendance.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard\Employee\Attendance.Designer.cs">
+    <Compile Include="Dashboard\Employee\UserControl\Attendance.Designer.cs">
       <DependentUpon>Attendance.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\Employee\EmployeeDashboard.cs">
@@ -58,16 +58,16 @@
     <Compile Include="Dashboard\Employee\EmployeeDashboard.Designer.cs">
       <DependentUpon>EmployeeDashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Employee\PenddingEmployee.cs">
+    <Compile Include="Dashboard\Employee\UserControl\PenddingEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard\Employee\PenddingEmployee.Designer.cs">
+    <Compile Include="Dashboard\Employee\UserControl\PenddingEmployee.Designer.cs">
       <DependentUpon>PenddingEmployee.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Employee\RequestLeave.cs">
+    <Compile Include="Dashboard\Employee\UserControl\RequestLeave.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard\Employee\RequestLeave.Designer.cs">
+    <Compile Include="Dashboard\Employee\UserControl\RequestLeave.Designer.cs">
       <DependentUpon>RequestLeave.cs</DependentUpon>
     </Compile>
     <Compile Include="Form1.cs">
@@ -90,17 +90,26 @@
     <Compile Include="Security\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Dashboard\Employee\Attendance.resx">
+    <Compile Include="Dashboard\Employee\UserControl\Views.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Employee\UserControl\Views.Designer.cs">
+      <DependentUpon>Views.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\Employee\EmployeeDashboard.resx">
       <DependentUpon>EmployeeDashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\Employee\PenddingEmployee.resx">
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\PenddingEmployee.resx">
       <DependentUpon>PenddingEmployee.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\Employee\RequestLeave.resx">
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\RequestLeave.resx">
       <DependentUpon>RequestLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\Views.resx">
+      <DependentUpon>Views.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -136,5 +145,6 @@
   <ItemGroup>
     <Content Include="App.config.xml" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

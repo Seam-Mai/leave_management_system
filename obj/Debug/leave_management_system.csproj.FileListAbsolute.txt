@@ -11,7 +11,8 @@ Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\lea
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.exe
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.pdb
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.exe.config
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Security.MViews.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.Attendance.resources
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.EmployeeDashboard.resources
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.PenddingEmployee.resources
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.RequestLeave.resources
-Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Employee.Attendance.resources

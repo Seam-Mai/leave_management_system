@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace leave_management_system.Dashboard.Employee
+namespace leave_management_system.Security
 {
-    public partial class PenddingEmployee : UserControl
+    public partial class MViews : UserControl
     {
-        public PenddingEmployee()
+        public MViews()
         {
             InitializeComponent();
         }

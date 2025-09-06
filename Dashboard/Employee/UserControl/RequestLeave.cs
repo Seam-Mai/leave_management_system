@@ -16,5 +16,16 @@ namespace leave_management_system.Dashboard.Employee
         {
             InitializeComponent();
         }
+
+     
+        private void txt_request_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RequestLeave_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

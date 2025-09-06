@@ -1,24 +1,27 @@
-﻿using System;
+﻿using leave_management_system.Dashboard.Employee;
+using leave_management_system.Security;
+using System;
 using System.Windows.Forms;
-using leave_management_system.Dashboard.Employee;
 
 namespace leave_management_system.Dashboard
 {
     public partial class EmployeeDashboard : Form
     {
         // UserControls
-        private PenddingEmployee penddingUC;
+        private PenddingEmployee pendingUC;
         private RequestLeave requestLeaveUC;
-        private Attendance attendanceUC; // declare
+        private Attendance attendanceUC;
+        private MViews viewsUC;
 
         public EmployeeDashboard()
         {
             InitializeComponent();
 
             // Initialize UserControls
-            penddingUC = new PenddingEmployee();
+            pendingUC = new PenddingEmployee();
             requestLeaveUC = new RequestLeave();
-            attendanceUC = new Attendance(); // initialize
+            attendanceUC = new Attendance();
+            viewsUC = new MViews();
 
             // Load default view (options buttons)
             LoadDefaultView();
@@ -27,6 +30,7 @@ namespace leave_management_system.Dashboard
             btnProfile.Click += BtnProfile_Click;
             btnLeaveRequest.Click += BtnLeaveRequest_Click;
             btnAttendance.Click += BtnAttendance_Click;
+            btnReports.Click += BtnReports_Click;
         }
 
         // ================= Default view =================
@@ -48,13 +52,16 @@ namespace leave_management_system.Dashboard
             int startX = (panelWidth - totalWidth) / 2;
             int startY = (panelHeight - btnHeight) / 2;
 
+            // Move buttons up a bit
+            startY -= 150;
+
             // ================= Buttons =================
-            Button btnPendding = new Button();
-            btnPendding.Text = "Pendding Requests";
-            btnPendding.Size = new System.Drawing.Size(btnWidth, btnHeight);
-            btnPendding.Location = new System.Drawing.Point(startX, startY);
-            btnPendding.Click += (s, e) => LoadUserControl(penddingUC);
-            panelMain.Controls.Add(btnPendding);
+            Button btnPending = new Button();
+            btnPending.Text = "Pending Requests";
+            btnPending.Size = new System.Drawing.Size(btnWidth, btnHeight);
+            btnPending.Location = new System.Drawing.Point(startX, startY);
+            btnPending.Click += (s, e) => LoadUserControl(pendingUC);
+            panelMain.Controls.Add(btnPending);
 
             Button btnRequestLeave = new Button();
             btnRequestLeave.Text = "Request Leave";
@@ -70,19 +77,23 @@ namespace leave_management_system.Dashboard
             btnAttendance.Click += (s, e) => LoadUserControl(attendanceUC);
             panelMain.Controls.Add(btnAttendance);
         }
+
         // ================= Load UserControl =================
         private void LoadUserControl(UserControl uc)
         {
             panelMain.Controls.Clear();
-            uc.Dock = DockStyle.Fill; // ensure it fills panel
+            uc.Dock = DockStyle.Fill;
             panelMain.Controls.Add(uc);
         }
 
         // ================= Sidebar button clicks =================
-        private void BtnProfile_Click(object sender, EventArgs e) => LoadUserControl(penddingUC);
+        private void BtnProfile_Click(object sender, EventArgs e) => LoadUserControl(pendingUC);
 
         private void BtnLeaveRequest_Click(object sender, EventArgs e) => LoadUserControl(requestLeaveUC);
 
         private void BtnAttendance_Click(object sender, EventArgs e) => LoadUserControl(attendanceUC);
+
+        private void BtnReports_Click(object sender, EventArgs e) => LoadUserControl(viewsUC);
+
     }
 }

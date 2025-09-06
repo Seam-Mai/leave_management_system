@@ -15,29 +15,30 @@ namespace leave_management_system.Dashboard
         private Button btnLogout;
         private Button btnToggleSidebar;
         private Button SYSTEM;
-        private Label lblWelcome;
         private Button btnSettings;
         private Button btnReports;
         private bool sidebarExpanded = true;
 
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EmployeeDashboard));
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.SYSTEM = new System.Windows.Forms.Button();
             this.btnToggleSidebar = new System.Windows.Forms.Button();
             this.btnProfile = new System.Windows.Forms.Button();
             this.btnLeaveRequest = new System.Windows.Forms.Button();
             this.btnAttendance = new System.Windows.Forms.Button();
-            this.btnSettings = new System.Windows.Forms.Button();
             this.btnReports = new System.Windows.Forms.Button();
+            this.btnSettings = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.panelHeader = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtname = new System.Windows.Forms.Label();
             this.panelMain = new System.Windows.Forms.Panel();
-            this.lblWelcome = new System.Windows.Forms.Label();
             this.panelSidebar.SuspendLayout();
-            this.panelMain.SuspendLayout();
+            this.panelHeader.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-
             // 
             // panelSidebar
             // 
@@ -55,7 +56,6 @@ namespace leave_management_system.Dashboard
             this.panelSidebar.Name = "panelSidebar";
             this.panelSidebar.Size = new System.Drawing.Size(250, 700);
             this.panelSidebar.TabIndex = 0;
-
             // 
             // SYSTEM
             // 
@@ -71,7 +71,6 @@ namespace leave_management_system.Dashboard
             this.SYSTEM.Text = "📋  Leave System";
             this.SYSTEM.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SYSTEM.UseVisualStyleBackColor = true;
-
             // 
             // btnToggleSidebar
             // 
@@ -82,14 +81,13 @@ namespace leave_management_system.Dashboard
             this.btnToggleSidebar.ForeColor = System.Drawing.Color.White;
             this.btnToggleSidebar.Location = new System.Drawing.Point(0, 90);
             this.btnToggleSidebar.Name = "btnToggleSidebar";
+            this.btnToggleSidebar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnToggleSidebar.Size = new System.Drawing.Size(250, 50);
             this.btnToggleSidebar.TabIndex = 1;
             this.btnToggleSidebar.Text = "☰  Menu";
             this.btnToggleSidebar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnToggleSidebar.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnToggleSidebar.UseVisualStyleBackColor = true;
             this.btnToggleSidebar.Click += new System.EventHandler(this.btnToggleSidebar_Click);
-
             // 
             // btnProfile
             // 
@@ -106,7 +104,6 @@ namespace leave_management_system.Dashboard
             this.btnProfile.Text = "🏠  Home";
             this.btnProfile.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnProfile.UseVisualStyleBackColor = true;
-
             // 
             // btnLeaveRequest
             // 
@@ -123,7 +120,6 @@ namespace leave_management_system.Dashboard
             this.btnLeaveRequest.Text = "📝  Leave Requests";
             this.btnLeaveRequest.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLeaveRequest.UseVisualStyleBackColor = true;
-
             // 
             // btnAttendance
             // 
@@ -140,7 +136,6 @@ namespace leave_management_system.Dashboard
             this.btnAttendance.Text = "📅  Attendance";
             this.btnAttendance.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAttendance.UseVisualStyleBackColor = true;
-
             // 
             // btnReports
             // 
@@ -157,7 +152,7 @@ namespace leave_management_system.Dashboard
             this.btnReports.Text = "📊  Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = true;
-
+            this.btnReports.Click += new System.EventHandler(this.BtnReports_Click);
             // 
             // btnSettings
             // 
@@ -174,7 +169,6 @@ namespace leave_management_system.Dashboard
             this.btnSettings.Text = "⚙️  Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.UseVisualStyleBackColor = true;
-
             // 
             // btnLogout
             // 
@@ -191,41 +185,48 @@ namespace leave_management_system.Dashboard
             this.btnLogout.Text = "🚪  Logout";
             this.btnLogout.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLogout.UseVisualStyleBackColor = true;
-
             // 
             // panelHeader
             // 
-            this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.BackColor = System.Drawing.Color.Teal;
+            this.panelHeader.Controls.Add(this.pictureBox1);
+            this.panelHeader.Controls.Add(this.txtname);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelHeader.Location = new System.Drawing.Point(250, 0);
             this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Size = new System.Drawing.Size(830, 80);
+            this.panelHeader.Size = new System.Drawing.Size(830, 55);
             this.panelHeader.TabIndex = 1;
-
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(673, 9);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(34, 37);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // txtname
+            // 
+            this.txtname.AutoSize = true;
+            this.txtname.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtname.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.txtname.Location = new System.Drawing.Point(724, 20);
+            this.txtname.Name = "txtname";
+            this.txtname.Size = new System.Drawing.Size(68, 16);
+            this.txtname.TabIndex = 0;
+            this.txtname.Text = "Seam Mai";
+            this.txtname.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // panelMain
             // 
             this.panelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(247)))), ((int)(((byte)(250)))));
-            this.panelMain.Controls.Add(this.lblWelcome);
             this.panelMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMain.Location = new System.Drawing.Point(250, 80);
+            this.panelMain.Location = new System.Drawing.Point(250, 55);
             this.panelMain.Name = "panelMain";
-            this.panelMain.Size = new System.Drawing.Size(830, 620);
+            this.panelMain.Size = new System.Drawing.Size(830, 645);
             this.panelMain.TabIndex = 2;
-
-            // 
-            // lblWelcome
-            // 
-            this.lblWelcome.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lblWelcome.AutoSize = true;
-            this.lblWelcome.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.lblWelcome.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(70)))), ((int)(((byte)(80)))));
-            this.lblWelcome.Location = new System.Drawing.Point(200, 280);
-            this.lblWelcome.Name = "lblWelcome";
-            this.lblWelcome.Size = new System.Drawing.Size(400, 54);
-            this.lblWelcome.TabIndex = 0;
-            this.lblWelcome.Text = "Welcome to Dashboard";
-
             // 
             // EmployeeDashboard
             // 
@@ -233,14 +234,16 @@ namespace leave_management_system.Dashboard
             this.Controls.Add(this.panelMain);
             this.Controls.Add(this.panelHeader);
             this.Controls.Add(this.panelSidebar);
+            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.Name = "EmployeeDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Dashboard - Leave Management System";
-            this.MinimumSize = new System.Drawing.Size(800, 600);
             this.panelSidebar.ResumeLayout(false);
-            this.panelMain.ResumeLayout(false);
-            this.panelMain.PerformLayout();
+            this.panelHeader.ResumeLayout(false);
+            this.panelHeader.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
+
         }
 
         private void btnToggleSidebar_Click(object sender, EventArgs e)
@@ -340,5 +343,8 @@ namespace leave_management_system.Dashboard
                 sidebarExpanded = true;
             }
         }
+
+        private Label txtname;
+        private PictureBox pictureBox1;
     }
 }
