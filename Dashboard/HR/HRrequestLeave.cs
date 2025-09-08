@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace leave_management_system.Security
+namespace leave_management_system.Dashboard.HR
 {
-    public partial class MViews : UserControl
+    public partial class HRrequestLeave : UserControl
     {
-        public MViews()
+        public HRrequestLeave()
         {
             InitializeComponent();
         }

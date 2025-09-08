@@ -2,7 +2,7 @@
 
 namespace leave_management_system.Security
 {
-    partial class MViews
+    partial class ViewsEmployee
     {
         /// <summary> 
         /// Required designer variable.

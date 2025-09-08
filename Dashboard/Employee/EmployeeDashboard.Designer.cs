@@ -169,6 +169,7 @@ namespace leave_management_system.Dashboard
             this.btnSettings.Text = "⚙️  Settings";
             this.btnSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSettings.UseVisualStyleBackColor = true;
+            this.btnSettings.Click += new System.EventHandler(this.BtnSettings_Click);
             // 
             // btnLogout
             // 

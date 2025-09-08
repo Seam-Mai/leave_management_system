@@ -17,7 +17,7 @@ namespace leave_management_system
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Dashboard.EmployeeDashboard());
+            Application.Run(new Dashboard.Manager.ManagerDashboard());
         }
     }
 }

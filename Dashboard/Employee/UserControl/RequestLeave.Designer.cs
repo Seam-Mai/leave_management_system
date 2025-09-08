@@ -292,7 +292,7 @@ namespace leave_management_system.Dashboard.Employee
             this.btnsubmit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnsubmit.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnsubmit.ForeColor = System.Drawing.Color.White;
-            this.btnsubmit.Location = new System.Drawing.Point(270, 176);
+            this.btnsubmit.Location = new System.Drawing.Point(889, 47);
             this.btnsubmit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnsubmit.Name = "btnsubmit";
             this.btnsubmit.Size = new System.Drawing.Size(100, 28);
@@ -307,7 +307,7 @@ namespace leave_management_system.Dashboard.Employee
             this.btnclear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnclear.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnclear.ForeColor = System.Drawing.Color.White;
-            this.btnclear.Location = new System.Drawing.Point(150, 176);
+            this.btnclear.Location = new System.Drawing.Point(760, 47);
             this.btnclear.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnclear.Name = "btnclear";
             this.btnclear.Size = new System.Drawing.Size(100, 28);

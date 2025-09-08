@@ -1,6 +1,7 @@
 ﻿using leave_management_system.Dashboard.Employee;
 using leave_management_system.Security;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace leave_management_system.Dashboard
@@ -11,7 +12,9 @@ namespace leave_management_system.Dashboard
         private PenddingEmployee pendingUC;
         private RequestLeave requestLeaveUC;
         private Attendance attendanceUC;
-        private MViews viewsUC;
+        private ViewsEmployee viewsUC;
+        private Setting settingUC;
+        
 
         public EmployeeDashboard()
         {
@@ -21,7 +24,8 @@ namespace leave_management_system.Dashboard
             pendingUC = new PenddingEmployee();
             requestLeaveUC = new RequestLeave();
             attendanceUC = new Attendance();
-            viewsUC = new MViews();
+            viewsUC = new ViewsEmployee();
+            settingUC = new Setting();
 
             // Load default view (options buttons)
             LoadDefaultView();
@@ -31,6 +35,7 @@ namespace leave_management_system.Dashboard
             btnLeaveRequest.Click += BtnLeaveRequest_Click;
             btnAttendance.Click += BtnAttendance_Click;
             btnReports.Click += BtnReports_Click;
+            btnSettings.Click += BtnSettings_Click;
         }
 
         // ================= Default view =================
@@ -86,6 +91,13 @@ namespace leave_management_system.Dashboard
             panelMain.Controls.Add(uc);
         }
 
+        //=== change them ===
+        public void ChangeThem()
+        {
+            panelSidebar.BackColor = Color.LightGray;
+            panelHeader.BackColor = Color.LightGray;
+        }
+
         // ================= Sidebar button clicks =================
         private void BtnProfile_Click(object sender, EventArgs e) => LoadUserControl(pendingUC);
 
@@ -95,5 +107,7 @@ namespace leave_management_system.Dashboard
 
         private void BtnReports_Click(object sender, EventArgs e) => LoadUserControl(viewsUC);
 
+        private void BtnSettings_Click(object sender, EventArgs e) => LoadUserControl(settingUC);
+        
     }
 }

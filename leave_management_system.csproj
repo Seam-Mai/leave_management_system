@@ -70,6 +70,90 @@
     <Compile Include="Dashboard\Employee\UserControl\RequestLeave.Designer.cs">
       <DependentUpon>RequestLeave.cs</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\HR\HRattendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRattendance.Designer.cs">
+      <DependentUpon>HRattendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRDashbord.Designer.cs">
+      <DependentUpon>HRDashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRMange.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRMange.Designer.cs">
+      <DependentUpon>HRMange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRpending.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRpending.Designer.cs">
+      <DependentUpon>HRpending.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRrequestLeave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRrequestLeave.Designer.cs">
+      <DependentUpon>HRrequestLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRsetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRsetting.Designer.cs">
+      <DependentUpon>HRsetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRviews.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\HR\HRviews.Designer.cs">
+      <DependentUpon>HRviews.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\Managerattendance.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\Managerattendance.Designer.cs">
+      <DependentUpon>Managerattendance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerDashbord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerDashbord.Designer.cs">
+      <DependentUpon>ManagerDashbord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerManage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerManage.Designer.cs">
+      <DependentUpon>ManagerManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerPendding.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerPendding.Designer.cs">
+      <DependentUpon>ManagerPendding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerrequestLeave.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerrequestLeave.Designer.cs">
+      <DependentUpon>ManagerrequestLeave.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerSetting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerSetting.Designer.cs">
+      <DependentUpon>ManagerSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Manager\ManagerView.Designer.cs">
+      <DependentUpon>ManagerView.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,11 +174,23 @@
     <Compile Include="Security\Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\Employee\UserControl\Views.cs">
+    <Compile Include="Dashboard\Employee\UserControl\ViewsEmployee.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard\Employee\UserControl\Views.Designer.cs">
-      <DependentUpon>Views.cs</DependentUpon>
+    <Compile Include="Dashboard\Employee\UserControl\ViewsEmployee.Designer.cs">
+      <DependentUpon>ViewsEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\Employee\UserControl\Setting.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Dashboard\Employee\UserControl\Setting.Designer.cs">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Security\SettingChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Security\SettingChangePassword.Designer.cs">
+      <DependentUpon>SettingChangePassword.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Dashboard\Employee\UserControl\Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
@@ -108,8 +204,50 @@
     <EmbeddedResource Include="Dashboard\Employee\UserControl\RequestLeave.resx">
       <DependentUpon>RequestLeave.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\Employee\UserControl\Views.resx">
-      <DependentUpon>Views.cs</DependentUpon>
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\ViewsEmployee.resx">
+      <DependentUpon>ViewsEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRattendance.resx">
+      <DependentUpon>HRattendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRDashbord.resx">
+      <DependentUpon>HRDashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRMange.resx">
+      <DependentUpon>HRMange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRpending.resx">
+      <DependentUpon>HRpending.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRrequestLeave.resx">
+      <DependentUpon>HRrequestLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRsetting.resx">
+      <DependentUpon>HRsetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\HR\HRviews.resx">
+      <DependentUpon>HRviews.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\Managerattendance.resx">
+      <DependentUpon>Managerattendance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerDashbord.resx">
+      <DependentUpon>ManagerDashbord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerManage.resx">
+      <DependentUpon>ManagerManage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerPendding.resx">
+      <DependentUpon>ManagerPendding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerrequestLeave.resx">
+      <DependentUpon>ManagerrequestLeave.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerSetting.resx">
+      <DependentUpon>ManagerSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Manager\ManagerView.resx">
+      <DependentUpon>ManagerView.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -128,6 +266,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Security\Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\Employee\UserControl\Setting.resx">
+      <DependentUpon>Setting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Security\SettingChangePassword.resx">
+      <DependentUpon>SettingChangePassword.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
