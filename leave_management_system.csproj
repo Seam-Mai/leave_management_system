@@ -192,6 +192,7 @@
     <Compile Include="Security\SettingChangePassword.Designer.cs">
       <DependentUpon>SettingChangePassword.cs</DependentUpon>
     </Compile>
+    <Compile Include="Security\UserInfo.cs" />
     <EmbeddedResource Include="Dashboard\Employee\UserControl\Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
     </EmbeddedResource>

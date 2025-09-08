@@ -18,25 +18,25 @@ namespace leave_management_system.Dashboard
 
         public EmployeeDashboard()
         {
-            InitializeComponent();
-
-            // Initialize UserControls
+            InitializeComponent(); 
             pendingUC = new PenddingEmployee();
             requestLeaveUC = new RequestLeave();
             attendanceUC = new Attendance();
             viewsUC = new ViewsEmployee();
             settingUC = new Setting();
 
-            // Load default view (options buttons)
             LoadDefaultView();
-
-            // Attach sidebar button events
             btnProfile.Click += BtnProfile_Click;
             btnLeaveRequest.Click += BtnLeaveRequest_Click;
             btnAttendance.Click += BtnAttendance_Click;
             btnReports.Click += BtnReports_Click;
             btnSettings.Click += BtnSettings_Click;
         }
+
+
+
+
+
 
         // ================= Default view =================
         private void LoadDefaultView()
@@ -50,14 +50,14 @@ namespace leave_management_system.Dashboard
             int btnHeight = 60;
             int spacing = 30;
 
-            // Correct total width for 3 buttons
+           
             int totalWidth = (btnWidth * 3) + (spacing * 2);
 
-            // Center horizontally and vertically
+          
             int startX = (panelWidth - totalWidth) / 2;
             int startY = (panelHeight - btnHeight) / 2;
 
-            // Move buttons up a bit
+           
             startY -= 150;
 
             // ================= Buttons =================
@@ -108,6 +108,10 @@ namespace leave_management_system.Dashboard
         private void BtnReports_Click(object sender, EventArgs e) => LoadUserControl(viewsUC);
 
         private void BtnSettings_Click(object sender, EventArgs e) => LoadUserControl(settingUC);
-        
+
+        internal void SetUserInfo(UserInfo userInfo)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
