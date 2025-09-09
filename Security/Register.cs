@@ -568,5 +568,11 @@ namespace leave_management_system.Security
                    !string.IsNullOrWhiteSpace(txtPosition.Text) ||
                    cmbRole.SelectedIndex != -1;
         }
+
+        private void btnchangeuseradmin_Click(object sender, EventArgs e)
+        {
+            AdminPassword adminPassword = new AdminPassword();
+            adminPassword.ShowDialog();
+        }
     }
 }

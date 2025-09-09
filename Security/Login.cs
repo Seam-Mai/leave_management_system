@@ -26,7 +26,7 @@ namespace leave_management_system.Security
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            // Basic validation
+            //  validation
             if (string.IsNullOrEmpty(username))
             {
                 MessageBox.Show("Please enter username.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);

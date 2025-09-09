@@ -32,3 +32,4 @@ Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\lea
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Manager.ManagerrequestLeave.resources
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Manager.ManagerSetting.resources
 Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Dashboard.Manager.ManagerView.resources
+Z:\.Net Programing\leave_management_system\leave_management_system\obj\Debug\leave_management_system.Security.AdminPassword.resources

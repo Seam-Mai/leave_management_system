@@ -36,6 +36,7 @@
             this.panelHeader = new System.Windows.Forms.Panel();
             this.lblTitle = new System.Windows.Forms.Label();
             this.lblSubtitle = new System.Windows.Forms.Label();
+            this.btnchangeuseradmin = new System.Windows.Forms.Button();
             this.panelMain.SuspendLayout();
             this.panelForm.SuspendLayout();
             this.panelHeader.SuspendLayout();
@@ -266,6 +267,7 @@
             // panelHeader
             // 
             this.panelHeader.BackColor = System.Drawing.Color.White;
+            this.panelHeader.Controls.Add(this.btnchangeuseradmin);
             this.panelHeader.Controls.Add(this.lblTitle);
             this.panelHeader.Controls.Add(this.lblSubtitle);
             this.panelHeader.Dock = System.Windows.Forms.DockStyle.Top;
@@ -298,6 +300,16 @@
             this.lblSubtitle.TabIndex = 1;
             this.lblSubtitle.Text = "Create a new account for the system access";
             this.lblSubtitle.UseWaitCursor = true;
+            // 
+            // btnchangeuseradmin
+            // 
+            this.btnchangeuseradmin.Location = new System.Drawing.Point(903, 15);
+            this.btnchangeuseradmin.Name = "btnchangeuseradmin";
+            this.btnchangeuseradmin.Size = new System.Drawing.Size(151, 35);
+            this.btnchangeuseradmin.TabIndex = 2;
+            this.btnchangeuseradmin.Text = "Change Password ";
+            this.btnchangeuseradmin.UseVisualStyleBackColor = true;
+            this.btnchangeuseradmin.Click += new System.EventHandler(this.btnchangeuseradmin_Click);
             // 
             // Register
             // 
@@ -341,5 +353,6 @@
         private System.Windows.Forms.ComboBox cmbRole;
         private System.Windows.Forms.Button btnRegister;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Button btnchangeuseradmin;
     }
 }
