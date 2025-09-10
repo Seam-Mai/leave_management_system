@@ -1,4 +1,6 @@
-﻿using System.Windows.Forms;
+﻿using System;
+using System.Windows.Forms;
+
 
 namespace leave_management_system.Dashboard.Employee
 {
@@ -76,13 +78,16 @@ namespace leave_management_system.Dashboard.Employee
             this.comleavetype.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comleavetype.FormattingEnabled = true;
             this.comleavetype.Items.AddRange(new object[] {
-            "AL",
-            "Upaid"});
+            "Sick Leave",
+            "Annual Leave",
+            "Special Leave",
+            "Unpaid Leave"});
             this.comleavetype.Location = new System.Drawing.Point(30, 48);
             this.comleavetype.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comleavetype.Name = "comleavetype";
             this.comleavetype.Size = new System.Drawing.Size(200, 28);
             this.comleavetype.TabIndex = 1;
+            this.comleavetype.SelectedIndexChanged += new System.EventHandler(this.comleavetype_SelectedIndexChanged);
             // 
             // dateTimePicker1
             // 
@@ -93,6 +98,7 @@ namespace leave_management_system.Dashboard.Employee
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 2;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // dateTimePicker2
             // 
@@ -103,6 +109,7 @@ namespace leave_management_system.Dashboard.Employee
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker2.TabIndex = 3;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // leavepanel1
             // 
@@ -226,6 +233,7 @@ namespace leave_management_system.Dashboard.Employee
             this.dataGridView1.Location = new System.Drawing.Point(30, 106);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(959, 120);
@@ -255,6 +263,7 @@ namespace leave_management_system.Dashboard.Employee
             this.dataGridView2.Location = new System.Drawing.Point(30, 80);
             this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
             this.dataGridView2.Size = new System.Drawing.Size(959, 80);
@@ -329,6 +338,7 @@ namespace leave_management_system.Dashboard.Employee
             this.btnaddown.TabIndex = 0;
             this.btnaddown.Text = "Add Own";
             this.btnaddown.UseVisualStyleBackColor = false;
+            this.btnaddown.Click += new System.EventHandler(this.btnaddown_Click);
             // 
             // txthistory
             // 
@@ -353,7 +363,7 @@ namespace leave_management_system.Dashboard.Employee
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "RequestLeave";
             this.Size = new System.Drawing.Size(1147, 710);
-            this.Load += new System.EventHandler(this.RequestLeave_Load);
+            this.Load += new System.EventHandler(this.RequestLeaveLoad);
             this.leavepanel1.ResumeLayout(false);
             this.leavepanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -389,5 +399,76 @@ namespace leave_management_system.Dashboard.Employee
         private Button btnclear;
         private Button btnaddown;
         private Label txthistory;
+
+        private void RequestLeaveLoad(object sender, EventArgs e)
+
+        {
+
+            try
+            {
+
+                dateTimePicker1.MinDate = DateTime.Today;
+                dateTimePicker2.MinDate = dateTimePicker1.Value;
+                comleavetype.SelectedIndex = 0;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Load error: " + ex.Message);
+            }
+            // Initialize DataGridView1 columns
+            this.dataGridView1.Columns.Add("Id", "ID");
+            this.dataGridView1.Columns.Add("LeaveType", "Leave Type");
+            this.dataGridView1.Columns.Add("StartDate", "Start Date");
+            this.dataGridView1.Columns.Add("EndDate", "End Date");
+
+            // Initialize DataGridView2 columns
+            this.dataGridView2.Columns.Add("Id", "ID");
+            this.dataGridView2.Columns.Add("Type", "Type");
+            this.dataGridView2.Columns.Add("StartDate", "Start Date");
+            this.dataGridView2.Columns.Add("EndDate", "End Date");
+            this.dataGridView2.Columns.Add("BalanceDay", "Balance Day");
+            this.dataGridView2.Columns.Add("Reason", "Reason");
+        }
+
+        private void comleavetype_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            UpdateLeaveTakenDays();
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateLeaveTakenDays();
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateLeaveTakenDays();
+        }
+
+        private void UpdateLeaveTakenDays()
+        {
+            if (comleavetype.SelectedIndex != -1 && dateTimePicker1.Value <= dateTimePicker2.Value)
+            {
+                dataGridView1.Rows.Clear();
+                int id = dataGridView1.Rows.Count + 1;
+                dataGridView1.Rows.Add(id, comleavetype.SelectedItem, dateTimePicker1.Value.ToShortDateString(), dateTimePicker2.Value.ToShortDateString());
+            }
+        }
+
+        private void btnaddown_Click(object sender, EventArgs e)
+        {
+            if (comleavetype.SelectedIndex != -1 && !string.IsNullOrEmpty(textBox1.Text) && dateTimePicker1.Value <= dateTimePicker2.Value)
+            {
+                int id = dataGridView2.Rows.Count + 1;
+                TimeSpan duration = dateTimePicker2.Value - dateTimePicker1.Value;
+                int balanceDay = (int)duration.TotalDays + 1; // Including start and end date
+                dataGridView2.Rows.Add(id, comleavetype.SelectedItem, dateTimePicker1.Value.ToShortDateString(), dateTimePicker2.Value.ToShortDateString(), balanceDay, textBox1.Text);
+                textBox1.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Please fill all fields correctly and ensure Start Date is not after End Date.");
+            }
+        }
     }
 }

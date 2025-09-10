@@ -109,9 +109,20 @@ namespace leave_management_system.Dashboard
 
         private void BtnSettings_Click(object sender, EventArgs e) => LoadUserControl(settingUC);
 
-        internal void SetUserInfo(UserInfo userInfo)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            Login login = new Login();
+            Close();
+            login.Show();
         }
+
+
+
+
+
+
+
+
+
     }
 }

@@ -1,6 +1,7 @@
 ﻿using leave_management_system.Dashboard;
 using leave_management_system.Dashboard.HR;
 using leave_management_system.Dashboard.Manager;
+using leave_management_system.Utils;
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -18,15 +19,12 @@ namespace leave_management_system.Security
 
         private void BtnLogin_Click(object sender, EventArgs e)
         {
-            
             string ConnectionString = @"Server=SEAM-MAI\MSIDB;Database=leave_system;Integrated Security=true;Encrypt=False";
-
-          
 
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text;
 
-            //  validation
+            // Validation
             if (string.IsNullOrEmpty(username))
             {
                 MessageBox.Show("Please enter username.", "Validation Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -45,10 +43,9 @@ namespace leave_management_system.Security
                 {
                     conn.Open();
 
-                
-                    string query = @"SELECT u.role_id, u.username 
+                    // Updated query to get all user information
+                    string query = @"SELECT u.user_id, u.username, u.full_name, u.email, u.position, u.role_id 
                                     FROM Users u 
-                                    JOIN Roles r ON u.role_id = r.role_id 
                                     WHERE u.username = @username AND u.password = @password";
 
                     SqlCommand cmd = new SqlCommand(query, conn);
@@ -59,25 +56,27 @@ namespace leave_management_system.Security
 
                     if (reader.Read())
                     {
-                      
-                        int roleId = Convert.ToInt32(reader["role_id"]);
-                        string userName = reader["username"].ToString();
+                        // Store user session data
+                        UserSession.UserId = Convert.ToInt32(reader["user_id"]);
+                        UserSession.Username = reader["username"].ToString();
+                        UserSession.FullName = reader["full_name"].ToString();
+                        UserSession.Email = reader["email"].ToString();
+                        UserSession.Position = reader["position"].ToString();
+                        UserSession.RoleId = Convert.ToInt32(reader["role_id"]);
 
                         reader.Close();
 
-                     
-                        MessageBox.Show($"Welcome {userName}!", "Login Successful",
+                        MessageBox.Show($"Welcome {UserSession.FullName}!", "Login Successful",
                                       MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                      
-                        RedirectToRoleDashboard(roleId);
+                        // Redirect based on role
+                        RedirectToRoleDashboard(UserSession.RoleId);
                     }
                     else
                     {
                         MessageBox.Show("Invalid username or password.", "Login Failed",
                                       MessageBoxButtons.OK, MessageBoxIcon.Error);
 
-                  
                         txtPassword.Clear();
                         txtUsername.Focus();
                     }

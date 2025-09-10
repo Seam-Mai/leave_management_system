@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leave_management_system.Security;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -137,6 +138,13 @@ namespace leave_management_system.Dashboard.Manager
         {
          
             this.Close();
+        }
+
+        private void ManagerbtnLogout_Click_1(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            Close();
+            login.Show();
         }
     }
 }

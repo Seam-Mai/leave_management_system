@@ -1,4 +1,5 @@
-﻿using System;
+﻿using leave_management_system.Security;
+using System;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -372,8 +373,11 @@ namespace leave_management_system.Dashboard.HR
 
         private void HRBtnLogout_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+
+            Login login = new Login();
+            Close();
+            login.Show();
+          
         }
 
         private Button HRbtnManage;
