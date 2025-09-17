@@ -199,9 +199,6 @@
       <DependentUpon>SettingChangePassword.cs</DependentUpon>
     </Compile>
     <Compile Include="Security\UserInfo.cs" />
-    <Compile Include="Services\NotificationService.cs" />
-    <Compile Include="Utils\ClearSession.cs" />
-    <Compile Include="Utils\DatabaseHelper.cs" />
     <EmbeddedResource Include="Dashboard\Employee\UserControl\Attendance.resx">
       <DependentUpon>Attendance.cs</DependentUpon>
     </EmbeddedResource>
