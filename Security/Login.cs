@@ -98,27 +98,30 @@ namespace leave_management_system.Security
             {
                 switch (roleId)
                 {
-                    case 1: // Admin
-                        Register adminDash = new Register();
-                        adminDash.Show();
-                        this.Hide();
-                        break;
-
-                    case 2: // Manager
-                        ManagerDashboard mgrDash = new ManagerDashboard();
-                        mgrDash.Show();
-                        this.Hide();
-                        break;
-
-                    case 3: // Employee
+                    case 1:// Employee
                         EmployeeDashboard empDash = new EmployeeDashboard();
                         empDash.Show();
                         this.Hide();
                         break;
 
-                    case 4: // HR
-                        HRDashboard hrDash = new HRDashboard();
-                        hrDash.Show();
+                    case 2: // HR 
+                       
+                        HRDashboard hRDashboard = new HRDashboard();
+                        hRDashboard.Show();
+                        
+                        this.Hide();
+                        break;
+
+                    case 3:// Manager 
+                        ManagerDashboard mgrDash = new ManagerDashboard();
+                        mgrDash.Show();
+                        this.Hide();
+                        break;
+
+                    case 4: // Admin
+
+                        Register adminDash = new Register();
+                        adminDash.Show();
                         this.Hide();
                         break;
 
